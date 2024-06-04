@@ -1,4 +1,9 @@
-const baseUrl = "http://192.168.2.56:3000/users"
+import { baseUrl } from "../config/api.js";
+
+async function getApiUser() {
+    const response = await fetch(`${baseUrl}/users`);
+    return await response.json()
+}
 
 function Listar(FunctiopnCallback) {
     FunctiopnCallback(null, {
@@ -10,6 +15,7 @@ function Listar(FunctiopnCallback) {
         company_id: "1",
         active: true
     })
+
 }
 function Inserir() {
 
