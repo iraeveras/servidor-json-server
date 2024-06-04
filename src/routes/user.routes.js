@@ -1,21 +1,12 @@
 import { Router } from "express";
+import userController from "../controllers/user.controller.js";
 
 const userRoutes = Router();
 
-userRoutes.get("/users", (req, res) => {
-    res.status(200).send("Listando usuários")
-});
-userRoutes.get("/users/:id", (req, res) => {
-    res.status(200).send("Listando um usuários")
-});
-userRoutes.post("/users", (req, res) => {
-    res.status(201).send("Inserindo um usuário")
-});
-userRoutes.put("/users/:id", (req, res) => {
-    res.status(200).send("Editando um usuários")
-});
-userRoutes.delete("/users/:id", (req, res) => {
-    res.status(200).send("Excluindo um usuários")
-});
+userRoutes.get("/users", userController.Listar);
+userRoutes.get("/users/:id", userController.ListarUmUsuario);
+userRoutes.post("/users", userController.Inserir);
+userRoutes.put("/users/:id", userController.Editar);
+userRoutes.delete("/users/:id", userController.Excluir);
 
 export default userRoutes;
