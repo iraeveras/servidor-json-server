@@ -1,5 +1,15 @@
+import userServices from "../services/user.services.js"
+
+
 function Listar(req, res) {
-    res.status(200).send("Listando usuários")
+    userServices.Listar((err, result) => {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.status(200).json(result)
+        }
+    })
+    // res.status(200).send("Listando usuários")
 }
 
 function ListarUmUsuario(req, res) {
