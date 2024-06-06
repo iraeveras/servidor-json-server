@@ -11,7 +11,7 @@
         <h1 class="title">Testando API</h1>
         <div class="container">
             <section class="registration-section">
-                <form class="form">
+                <form class="form" method="post">
                     <label for="first_name">Nome:</label>
                     <input type="text" id="first_name">
                     <label for="last_name">Sobrenome:</label>
@@ -24,14 +24,29 @@
                     <input type="text" id="company_id">
                     <label for="active">Status:</label>
                     <select name="" id="active">
-                        <option value="0">Ativo</option>
-                        <option value="1">Inativo</option>
+                        <option value="">Selecionar</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
                     </select>
-                    <button>Enviar</button>
+                    <button type="button" id="btn-cadastrar">Cadastrar</button>
                 </form>
             </section>
-            <aside id="user-list">
+            <aside >
                 <h4>Lista de usuários</h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>NOME</td>
+                            <td>SOBRENOME</td>
+                            <td>EMAIL</td>
+                            <td>NIVEL</td>
+                            <td>ID EMPRESA</td>
+                            <td>STATUS</td>
+                        </tr>
+                    </thead>
+                    <tbody id="user-list"></tbody>
+                </table>
 
             </aside>
         </div>

@@ -1,114 +1,140 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": "1",
+      "first_name": "Irae",
+      "last_name": "Veras",
+      "email": "irae.online@gmail.com",
+      "permission_level": "admin",
+      "company_id": "1",
+      "active": true
+    },
+    {
+      "id": "ecf5",
+      "first_name": "Lucas",
+      "last_name": "Verissimo",
+      "email": "lucas.verissimo@gmail.com",
+      "permission_level": "user",
+      "company_id": "1",
+      "active": "0"
+    },
+    {
+      "id": "bd93",
+      "first_name": "João",
+      "last_name": "Cardoso",
+      "email": "joao.cardoso",
+      "permission_level": "user",
+      "company_id": "2",
+      "active": "Ativo"
+    },
+    {
+      "id": "8bda",
+      "first_name": "Salvino",
+      "last_name": "Batista",
+      "email": "salvino.batista@gmail.com",
+      "permission_level": "admin",
+      "company_id": "2",
+      "active": "Ativo"
+    }
+  ],
+  "company": [
+    {
+      "id": "1",
+      "corporate_reason": "Condominio Plaza Casa Forte",
+      "fantasy_name": "Condominio",
+      "cnpj": "03.251.652/0001-95",
+      "active": true
+    }
+  ],
+  "centro_custo": [
+    {
+      "id": "1",
+      "name": "supervisão predial",
+      "company_id": "1",
+      "active": true
+    }
+  ],
+  "funcionario": [
+    {
+      "id": "1",
+      "name": "Reginaldo",
+      "admissao": "15/05/2024",
+      "avatar_url": "",
+      "dependente": [
         {
-            "id": "1",
-            "first_name": "Irae",
-            "last_name": "Veras",
-            "email": "irae.online@gmail.com",
-            "permission_level": "admin",
-            "company_id": "1",
-            "active": true
+          "id": "1",
+          "name": "Lucas",
+          "dta_nascimento": "18/09/2003",
+          "plano_saude": true,
+          "plano_odonto": true
         }
-    ],
-    "company": [
+      ],
+      "beneficio": [
         {
-            "id": "1",
-            "corporate_reason": "Condominio Plaza Casa Forte",
-            "fantasy_name": "Condominio",
-            "cnpj": "03.251.652/0001-95",
-            "active": true
-        }
-    ],
-    "centro_custo": [
+          "id": "1",
+          "name": "Amil saude",
+          "type": "saude",
+          "price": "73,85"
+        },
         {
-            "id": "1",
-            "name": "supervisão predial",
-            "company_id": "1",
-            "active": true
+          "id": "2",
+          "name": "Amil odonto",
+          "type": "odonto",
+          "price": "73,85"
         }
-    ],
-    "funcionario": [
-        {
+      ],
+      "company_id": "1",
+      "centro_custo_id": "1",
+      "ferias": {
+        "id": "1",
+        "per_aquisitivo": [
+          {
             "id": "1",
-            "name": "Reginaldo",
-            "admissao": "15/05/2024",
-            "avatar_url": "",
-            "dependente": [
-                {
-                    "id": "1",
-                    "name": "Lucas",
-                    "dta_nascimento": "18/09/2003",
-                    "plano_saude": true,
-                    "plano_odonto": true
-                }
-            ],
-            "beneficio": [
-                {
-                    "id":"1",
-                    "name": "Amil saude",
-                    "type": "saude",
-                    "price": "73,85"
-                },
-                {
-                    "id":"2",
-                    "name": "Amil odonto",
-                    "type": "odonto",
-                    "price": "73,85"
-                }
-            ],
-            "company_id": "1",
-            "centro_custo_id": "1",
-            "ferias": {
-                "id": "1",
-                "per_aquisitivo": [
-                    { 
-                        "id": "1", 
-                        "dta_inicio": "06/02/2023", 
-                        "dta_final": "05/02/2024"
-                    }
-                ],
-                "per_gozo": [
-                    {
-                        "id": "1", 
-                        "qtd_gozo": 30, 
-                        "abono_pecuniario": true, 
-                        "adto_decimo_terceiro": true, 
-                        "dta_inicio": "09/03/2024", 
-                        "dta_final": "07/04/2024"
-                    }
-                ]
-            },
-            "active": true
-        }
-    ],
-    "beneficio": [
-        {
+            "dta_inicio": "06/02/2023",
+            "dta_final": "05/02/2024"
+          }
+        ],
+        "per_gozo": [
+          {
             "id": "1",
-            "type": "Vale transporte",
-            "price": "73,85"
-        }
-    ],
-    "fornecedor": [
-        {
-            "id": "1",
-            "name": "Amil",
-            "cnpj":"01.002.999/0020-01",
-            "service_type": "beneficios plano de saude",
-            "active": true
-        }
-    ],
-    "indices": [
-        {
-            "id": "1",
-            "indice_type": "IGPDI",
-            "periodo":
-                {
-                    "id": "1",
-                    "mes": "janeiro",
-                    "ano": "2024"
-                },
-            "percente": 0.72,
-            "acumulado_doze_meses": 3.50
-        }
-    ]
+            "qtd_gozo": 30,
+            "abono_pecuniario": true,
+            "adto_decimo_terceiro": true,
+            "dta_inicio": "09/03/2024",
+            "dta_final": "07/04/2024"
+          }
+        ]
+      },
+      "active": true
+    }
+  ],
+  "beneficio": [
+    {
+      "id": "1",
+      "type": "Vale transporte",
+      "price": "73,85"
+    }
+  ],
+  "fornecedor": [
+    {
+      "id": "1",
+      "name": "Amil",
+      "cnpj": "01.002.999/0020-01",
+      "service_type": "beneficios plano de saude",
+      "active": true
+    }
+  ],
+  "indices": [
+    {
+      "id": "1",
+      "indice_type": "IGPDI",
+      "periodo": {
+        "id": "1",
+        "mes": "janeiro",
+        "ano": "2024"
+      },
+      "percente": 0.72,
+      "acumulado_doze_meses": 3.5
+    }
+  ]
 }
